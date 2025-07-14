@@ -1385,7 +1385,7 @@ namespace MapLibre
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */[Protocol]
-	interface MLNCluster : IMLNFeature
+	public interface MLNCluster : IMLNFeature
 	{
 		// @required @property (readonly, nonatomic) NSUInteger clusterIdentifier;
 		[Abstract]
@@ -1398,7 +1398,7 @@ namespace MapLibre
 		nuint ClusterPointCount { get; }
 	}
 
-	interface IMLNCluster
+	public interface IMLNCluster
 	{
 		
 	}
@@ -1839,7 +1839,7 @@ namespace MapLibre
 		NSDictionary<NSString, NSObject> GeoJSONDictionary { get; }
 	}
 
-	interface IMLNFeature
+	public interface IMLNFeature
 	{
 		
 	}

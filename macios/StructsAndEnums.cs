@@ -9,6 +9,10 @@ using ObjCRuntime;
 
 namespace MapLibre
 {
+	// Type alias to fix the double 'I' reference issue in generated code
+	// Using internal to match the accessibility of IMLNFeature
+	public interface IIMLNFeature : IMLNFeature {}
+	
 	[Native]
 	public enum MLNErrorCode : long
 	{
