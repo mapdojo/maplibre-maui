@@ -2365,7 +2365,7 @@ namespace MapLibre
   be used.
 */[Protocol]
 	[BaseType (typeof(NSObject))]
-	interface MLNStylable
+	public interface MLNStylable
 	{
 		// @required @property (readonly, nonatomic) MLNStyle * _Nullable style;
 		[Abstract]
@@ -3144,7 +3144,7 @@ namespace MapLibre
 
 	// @interface MLNMapView : UIView <MLNStylable>
 	[BaseType (typeof(UIView))]
-	interface MLNMapView : MLNStylable
+	public interface MLNMapView : MLNStylable
 	{
 		// -(instancetype _Nonnull)initWithFrame:(CGRect)frame;
 		[Export ("initWithFrame:")]

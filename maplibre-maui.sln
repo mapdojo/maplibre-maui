@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.Maplibre.Handlers", "h
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Org.Maplibre.MaciOS", "macios\Org.Maplibre.MaciOS.csproj", "{FE1119EC-DF29-49BB-A15E-DEA8B20E1249}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLibre.Tests.iOS", "MapLibre.Tests.iOS\MapLibre.Tests.iOS.csproj", "{A38B6355-9874-4517-B4DF-6B5AF3C1B66F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{FE1119EC-DF29-49BB-A15E-DEA8B20E1249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1119EC-DF29-49BB-A15E-DEA8B20E1249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1119EC-DF29-49BB-A15E-DEA8B20E1249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38B6355-9874-4517-B4DF-6B5AF3C1B66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38B6355-9874-4517-B4DF-6B5AF3C1B66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38B6355-9874-4517-B4DF-6B5AF3C1B66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38B6355-9874-4517-B4DF-6B5AF3C1B66F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
