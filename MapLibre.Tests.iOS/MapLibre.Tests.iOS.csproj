@@ -13,6 +13,16 @@
         <ApplicationVersion>1.0</ApplicationVersion>
         <!-- Disable AOT for test projects to avoid compilation issues -->
         <UseFullAotCompilation>false</UseFullAotCompilation>
+        <!-- Configure for test runner compatibility -->
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
+        <!-- Specify the main entry point to avoid conflicts -->
+        <StartupObject>MapLibre.Tests.iOS.Program</StartupObject>
+        <!-- Force framework-dependent deployment -->
+        <SelfContained>false</SelfContained>
+        <PublishSingleFile>false</PublishSingleFile>
+        <!-- Configure runtime framework -->
+        <UseAppHost>false</UseAppHost>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,12 +31,15 @@
         <!-- Disable AOT for debug builds -->
         <UseFullAotCompilation>false</UseFullAotCompilation>
         <UseInterpreter>true</UseInterpreter>
+        <!-- Enable framework-dependent deployment for tests -->
+        <SelfContained>false</SelfContained>
     </PropertyGroup>
     
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
         <MtouchLink>SdkOnly</MtouchLink>
         <!-- Keep AOT disabled for test projects even in release -->
         <UseFullAotCompilation>false</UseFullAotCompilation>
+        <SelfContained>false</SelfContained>
     </PropertyGroup>
 
     <ItemGroup>

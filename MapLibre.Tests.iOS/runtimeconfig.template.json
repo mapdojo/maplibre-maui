@@ -1,0 +1,23 @@
+{
+  "runtimeOptions": {
+    "tfm": "net9.0",
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "9.0.0"
+    },
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "9.0.7"
+      },
+      {
+        "name": "Microsoft.iOS",
+        "version": "18.5.9207"
+      }
+    ],
+    "configProperties": {
+      "System.Globalization.Invariant": false
+    }
+  }
+}
+
