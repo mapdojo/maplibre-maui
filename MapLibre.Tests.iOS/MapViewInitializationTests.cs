@@ -11,7 +11,7 @@ namespace MapLibre.Tests.iOS
     public class MapViewInitializationTests : IDisposable
     {
         private UIWindow window;
-        // private MLNMapView mapView;
+        private MLNMapView mapView;
         
         public MapViewInitializationTests()
         {
@@ -22,21 +22,21 @@ namespace MapLibre.Tests.iOS
         [Fact]
         public void MapView_InitializesSuccessfully()
         {
-            // // Arrange
-            // mapView = new MLNMapView(new CGRect(0, 0, 800, 600));
-            //
-            // // Act
-            // window.AddSubview(mapView);
-            // window.MakeKeyAndVisible();
-            //
-            // // Assert
-            // Assert.NotNull(mapView);
-            // Assert.NotNull(mapView.Style);
+            // Arrange
+            mapView = new MLNMapView(new CGRect(0, 0, 800, 600));
+            
+            // Act
+            window.AddSubview(mapView);
+            window.MakeKeyAndVisible();
+            
+            // Assert
+            Assert.NotNull(mapView);
+            Assert.NotNull(mapView.Style);
         }
         
         public void Dispose()
         {
-            // mapView?.Dispose();
+            mapView?.Dispose();
             window?.Dispose();
         }
     }
