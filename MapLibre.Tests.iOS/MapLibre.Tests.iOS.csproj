@@ -1,17 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0-ios</TargetFramework>
+        <TargetFramework>net8.0-ios</TargetFramework>
+        <OutputType>Exe</OutputType>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
-        <SupportedOSPlatformVersion>12.2</SupportedOSPlatformVersion>
-        <RuntimeIdentifier>iossimulator-arm64</RuntimeIdentifier>
-        <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
+        <IsTestProject>true</IsTestProject>
+        <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
         <ApplicationId>com.maplibre.tests.ios</ApplicationId>
         <ApplicationDisplayName>MapLibre Tests iOS</ApplicationDisplayName>
         <ApplicationVersion>1.0</ApplicationVersion>
-        <ApplicationTitle>MapLibre Tests iOS</ApplicationTitle>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,10 +31,6 @@
 
     <ItemGroup>
         <Using Include="Xunit"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\macios\Org.Maplibre.MaciOS.csproj" />
     </ItemGroup>
 
     <ItemGroup>
