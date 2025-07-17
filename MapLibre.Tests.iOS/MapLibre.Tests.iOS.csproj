@@ -8,6 +8,10 @@
         <SupportedOSPlatformVersion>12.2</SupportedOSPlatformVersion>
         <RuntimeIdentifiers>ios-arm64;iossimulator-arm64;iossimulator-x64</RuntimeIdentifiers>
         <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
+        <ApplicationId>com.maplibre.tests.ios</ApplicationId>
+        <ApplicationDisplayName>MapLibre Tests iOS</ApplicationDisplayName>
+        <ApplicationVersion>1.0</ApplicationVersion>
+        <ApplicationTitle>MapLibre Tests iOS</ApplicationTitle>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -34,6 +38,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\macios\Org.Maplibre.MaciOS.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="Info.plist" />
     </ItemGroup>
 
 </Project>
