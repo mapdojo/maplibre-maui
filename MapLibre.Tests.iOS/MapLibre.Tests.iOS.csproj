@@ -11,15 +11,22 @@
         <ApplicationId>com.maplibre.tests.ios</ApplicationId>
         <ApplicationDisplayName>MapLibre Tests iOS</ApplicationDisplayName>
         <ApplicationVersion>1.0</ApplicationVersion>
+        <!-- Disable AOT for test projects to avoid compilation issues -->
+        <UseFullAotCompilation>false</UseFullAotCompilation>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
         <MtouchLink>None</MtouchLink>
         <MtouchDebug>true</MtouchDebug>
+        <!-- Disable AOT for debug builds -->
+        <UseFullAotCompilation>false</UseFullAotCompilation>
+        <UseInterpreter>true</UseInterpreter>
     </PropertyGroup>
     
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
         <MtouchLink>SdkOnly</MtouchLink>
+        <!-- Keep AOT disabled for test projects even in release -->
+        <UseFullAotCompilation>false</UseFullAotCompilation>
     </PropertyGroup>
 
     <ItemGroup>
